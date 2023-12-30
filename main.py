@@ -10,7 +10,8 @@ bot = telebot.TeleBot(TOKEN)
 def send_welcome(message: telebot.types.Message):
     text = ("Вас приветствует FunnyExchanger_bot!\nЧтобы узнать цену на валюту, отправьте сообщение в формате:\n<количество первой валюты> \
     <имя первой валюты, цену которой хотите узнать> \
-    <имя второй валюты, которую хотите получить> \nДля просмотра доступных валют введите: /values")
+    <имя второй валюты, которую хотите получить> \nДля просмотра доступных валют введите: /values \
+    Например: 2 рубль доллар")
     bot.send_message(message.chat.id, text)
 
 @bot.message_handler(commands=['values'])
